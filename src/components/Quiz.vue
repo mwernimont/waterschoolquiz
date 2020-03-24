@@ -233,6 +233,7 @@ export default {
     }
     #questionArea{
         width: $width;
+        max-width: 700px;
         display: flex;
         flex-direction: column;
         margin-bottom: 50px;
