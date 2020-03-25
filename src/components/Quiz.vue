@@ -61,9 +61,9 @@ export default {
             let questionDiv = document.getElementById("question");
             let options = document.querySelectorAll("button");
             let correctCount = document.getElementById("correct");
-            correctCount.innerHTML = correct;
+            correctCount.innerHTML = correct + " Correct";
             let incorrectCount = document.getElementById("incorrect");
-            incorrectCount.innerHTML = incorrect;
+            incorrectCount.innerHTML = incorrect + " Incorrect";
             let answersCorrectDiv = document.getElementById("answersCorrect");
             let answersIncorrectDiv = document.getElementById("answersIncorrect");
             let message = document.getElementById("message");
@@ -95,12 +95,12 @@ export default {
             function CheckAnswer(answer){
                 if(answers[index].toString() === answer){
                     correct++;
-                    correctCount.innerHTML = correct;
+                    correctCount.innerHTML = correct + " Correct";
                     self.Celebration = true;
                     celebrationExplanation.innerHTML = explanations[index];
                 }else{
                     incorrect++;
-                    incorrectCount.innerHTML = incorrect;
+                    incorrectCount.innerHTML = incorrect + " Incorrect";
                     self.Shame = true;
                     shameExplanation.innerHTML = explanations[index];
                 }
@@ -127,8 +127,8 @@ export default {
                 }else{
                     message.innerHTML = "Perhaps you should brush up on your water?"
                 }
-                answersCorrectDiv.innerHTML = correct;
-                answersIncorrectDiv.innerHTML = incorrect;
+                answersCorrectDiv.innerHTML = correct + " Correct";
+                answersIncorrectDiv.innerHTML = incorrect + " Incorrect";
             }
 
             CreateQuestion();
@@ -233,7 +233,7 @@ export default {
     }
     #questionArea{
         width: $width;
-        max-width: 700px;
+        max-width: 650px;
         display: flex;
         flex-direction: column;
         margin-bottom: 50px;
